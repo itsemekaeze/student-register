@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <div class="p-2 mt-4">
+        <h1 class="fs-3 text-center">View Student</h1>
+    </div>
+    <div class="row">
+        {% if students %}
+        <div class="col-sm-6 mb-3 mt-4 mb-sm-0" style="margin: 0 auto;>
+            <div ">
+            <div class="card" style="width: 20rem; height: 28rem; margin:0 auto;">
+                <div class="card-body d-flex justify-content-xxl-between">
+                    <h4 class="mx-2">Name: </h4><h4 class="card-text mx-2">{{ students.name }}</h4>
+
+                </div>
+                <div class="card-body d-flex justify-content-xxl-between">
+                    <h4 class="mx-2">Age: </h4><h4 class="card-text mx-2 ">{{ students.age }}</h4>
+
+                </div>
+                <div class="card-body d-flex justify-content-xxl-between">
+                    <h4 class="mx-2">Class: </h4><h4 class="card-text mx-2">{{ students.x_class }}</h4>
+
+                </div>
+                <div class="card-body d-flex justify-content-xxl-between">
+                    <h4 class="mx-2">Gender: </h4><h4 class="card-text mx-2">{{ students.gender }}</h4>
+
+                </div>
+                <div class="card-body d-flex justify-content-xxl-between">
+                    <h4 class="mx-2">DateOfBirth: </h4><h4 class="card-text mx-2">{{ students.dob }}</h4>
+
+                </div>
+                <hr>
+                <div class=" text-center mb-3">
+
+                    <a href="{% url 'home' %}">
+                        <button type="submit" class="btn btn-danger btn-lg">Cancel</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+
+{% endblock content %}

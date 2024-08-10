@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <div class="p-2 mt-4">
+        <h1 class="fs-3 text-center">Add Student</h1>
+    </div>
+    <div >
+        <form class="px-4 py-3" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleDropdownFormName1" class="form-label"> First Name</label>
+                <input type="text"  class="form-control" id="exampleDropdownFormName1" name="content">
+            </div>
+            <div class="mb-3">
+                <label for="exampleDropdownFormAge1" class="form-label">Age</label>
+                <input type="text" class="form-control" id="exampleDropdownFormAge1" name="age">
+            </div>
+            <div class="mb-3">
+                <label for="exampleDropdownFormX_class1" class="form-label">Class</label>
+                <input type="text" class="form-control" id="exampleDropdownFormX_class1" name="x_class">
+            </div>
+            <div class="mb-3">
+                <label for="exampleDropdownFormGender1" class="form-label">Gender</label>
+                <input type="text" class="form-control" id="exampleDropdownFormGender1" name="sex">
+            </div>
+            <div class="mb-3">
+                <label for="exampleDropdownFormDob1" class="form-label">Date Of Birth</label>
+                <input type="text" class="form-control" id="exampleDropdownFormDob1" name="dob">
+            </div>
+            <button type="submit" class="btn btn-primary ">Submit</button>
+        </form>
+    </div>
+
+
+</div>
+
+{% endblock content %}
+

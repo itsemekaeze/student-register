@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="p-2 mt-4">
+    <h1 class="fs-3 text-center">Delete Student</h1>
+</div>
+<div class="row">
+    <div class="col-sm-6 mb-3 mt-4 mb-sm-0" style="margin: 0 auto">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title mb-4 mt-4 text-center">Are you sure you want to delete "{{obj.name}}"? </h5>
+
+                    <div class="text-center">
+
+                        <a href="{% url 'home' %}" class="btn btn-danger btn-lg mx-3">NO</a>
+                        <input type="submit" class="btn btn-primary btn-lg" value="Yes">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+
+{% endblock content %}
